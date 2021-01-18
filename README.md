@@ -10,5 +10,3 @@ A powercord plugin that allows you to change your HypeSquad house through a comm
 
 -  `git clone https://github.com/slow/hypesquad-house-swap`
 
-# Support
-- eternal#1000
