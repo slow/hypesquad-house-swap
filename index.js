@@ -18,8 +18,8 @@ module.exports = class Swap extends Plugin {
                const receivedMessage = createBotMessage(getChannelId(), {});
                receivedMessage.author.username = 'House Switcher';
                receivedMessage.author.avatar = 'house_switcher';
-               receivedMessage.content = 'Invalid option or none provided. Options: **Brilliance, Bravery, Balance**'
-               return receiveMessage(receivedMessage.channel_id, receivedMessage)
+               receivedMessage.content = 'Invalid option or none provided. Options: **Brilliance, Bravery, Balance**';
+               return receiveMessage(receivedMessage.channel_id, receivedMessage);
             }
 
             let house = args[0].toLowerCase();
@@ -33,7 +33,7 @@ module.exports = class Swap extends Plugin {
          bravery: 'HOUSE_1',
          brilliance: 'HOUSE_2',
          balance: 'HOUSE_3'
-      }
+      };
 
       joinHypeSquadOnline({ houseID: houses[house] });
 
@@ -41,9 +41,9 @@ module.exports = class Swap extends Plugin {
       receivedMessage.author.username = 'House Switcher';
       receivedMessage.author.avatar = 'house_switcher';
 
-      receivedMessage.content = `Your house has been swapped to **${house.charAt(0).toUpperCase()}${house.slice(1, house.length)}**`
+      receivedMessage.content = `Your house has been swapped to **${house.charAt(0).toUpperCase()}${house.slice(1, house.length)}**`;
 
-      return receiveMessage(receivedMessage.channel_id, receivedMessage)
+      return receiveMessage(receivedMessage.channel_id, receivedMessage);
    }
 
    pluginWillUnload() {
